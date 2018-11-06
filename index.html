@@ -182,28 +182,50 @@
 
     <!-- Scripts -->
       <script src="assets/js/main.js"></script>
-      <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+      <!-- <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
       <script type="text/javascript">
          (function(){
             emailjs.init("user_t44QlphsrYCH1hTw59nhh");
          })();
-      </script>
+      </script> -->
+			<script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+			<script>
+			  // Initialize Firebase
+			  var config = {
+			    apiKey: "AIzaSyBTsoXEej-DJG2Qu-calBdIG9Q2jWj-a8s",
+			    authDomain: "s4sinfo-e486e.firebaseapp.com",
+			    databaseURL: "https://s4sinfo-e486e.firebaseio.com",
+			    projectId: "s4sinfo-e486e",
+			    storageBucket: "",
+			    messagingSenderId: "173829217307"
+			  };
+			  firebase.initializeApp(config);
+			</script>
+
 			<script>
 			function email(){
 				var elem = document.getElementById("email");
 				var email = elem.value;
 				if (email && email.indexOf('@') > 0 && email.indexOf('.') > 0) {
 					console.log('valid email', email);
-					document.getElementsByClassName('actions')[0].innerHTML = '<li>Thanks! We will contact you shortly to discuss</li>'
-					var service_id = "default_service";
-					var template_id = "template_Fb2Cs86e";
 
-					emailjs.send(service_id, template_id, {from_name: email, reply_to: email})
-				  	.then(function(){
-				    	alert("Sent!");
-				    }, function(err) {
-				      alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
-				    });
+
+	        firebase.auth().createUserWithEmailAndPassword(email, 'password').then(
+	          (user) => {
+	            document.getElementsByClassName('actions')[0].innerHTML = '<li>Thanks! We will contact you shortly to discuss</li>'
+	          }, (err) => {
+							 document.getElementsByClassName('actions')[0].innerHTML = err;
+	        });
+
+					// var service_id = "default_service";
+					// var template_id = "template_Fb2Cs86e";
+					//
+					// emailjs.send(service_id, template_id, {from_name: email, reply_to: email})
+				  // 	.then(function(){
+				  //   	alert("Sent!");
+				  //   }, function(err) {
+				  //     alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
+				  //   });
 
 				} else {
 					alert('please enter a valid email')
