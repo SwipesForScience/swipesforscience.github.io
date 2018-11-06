@@ -1,117 +1,215 @@
 <!DOCTYPE HTML>
 <!--
-	Split Screen by Pixelarity
-	pixelarity.com | hello@pixelarity.com
-	License: pixelarity.com/license
+  Split Screen by Pixelarity
+  pixelarity.com | hello@pixelarity.com
+  License: pixelarity.com/license
 -->
 <html>
-	<head>
-		<title>Split Screen by Pixelarity</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			.bordered {
-				border-style: solid;
-				border-width: thin;
-				border-color: #dee0e4;
+  <head>
+    <title>Split Screen by Pixelarity</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      .bordered {
+        border-style: solid;
+        border-width: thin;
+        border-color: #dee0e4;
+      }
+      a.button.primary.icon.inverse {
+        color: #58cfca !important;
+        background-color: white;
+        border-style: solid;
+        border-color: #58cfca;
+        border-width: thin;
+      }
+
+      a.button.primary.icon.inverse:hover {
+        color: white !important;
+        background-color: #58cfca !important;
+        border-style: solid;
+        border-color: #58cfca;
+        border-width: thin;
+      }
+
+      .logo {
+        height: 40px;
+        margin-right: 1.1em;
+      }
+
+      .wlogo {
+        height: 20px;
+      }
+
+      .supported {
+        margin: 0;
+      }
+
+      .frame {
+          height: 40px;      /* equals max image height */
+          width: 250px;
+          white-space: nowrap;
+          text-align: center;
+          /* margin: 1em 0; */
+      }
+
+      .helper {
+          display: inline-block;
+          height: 100%;
+          vertical-align: middle;
+      }
+
+      img {
+          vertical-align: middle;
+          max-width: 250px;
+      }
+
+      .nobottom {
+        margin-bottom: 0.5em;
+      }
+
+      .mt-3 {
+        margin-top: 3em;
+      }
+    </style>
+  </head>
+  <body class="is-preload">
+
+    <!-- Page Wrapper -->
+      <div id="page-wrapper">
+
+        <!-- Wrapper -->
+          <section id="wrapper">
+            <div class="inner">
+              <h1>Swipes<b>4</b>Science</h1>
+              <h2>Build your own citizen science game<br />
+              to annotate your dataset</h2>
+              <p>
+                Annotating large datasets of images and text is time-consuming!
+                That's why we're building an extensible, easy-to-use, template to turn your
+                scientific data annotation project into a citizen science game.
+              </p>
+              <ul class="actions nobottom">
+                <!-- <li><a href="http://docs.swipesforscience.org" class="button primary icon fa-github">Build your own</a></li> -->
+								<li><input type="text" placeholder="enter your email here" name="email" id="email" onchange="email()"></input></li>
+								<li><a href="#" class="button primary icon inverse" onclick="email()">Get in touch</a></li>
+
+              </ul>
+              <!-- <p>
+                <input type="text" placeholder="enter your email here"></input>
+              </p> -->
+              <p>
+                <a class="" href="http://github.com/SwipesForScience/SwipesForScience">View code on GitHub</a>
+              </p>
+              <div class="mt-3">
+                <p class="supported">Supported by:</p>
+                <div class="frame logoset">
+                  <span class="helper"></span><img src="./images/elife-logo-full.b1283c9a.svg" class="logo"/>
+                  <span class="helper"></span><img src="./images/Signature_Left_Purple_RGB.png" class="wlogo" />
+                </div>
+              </div>
+              <!--
+              <hr />
+              <h3>Form Stuff</h3>
+              <form method="post" action="#">
+                <div class="fields">
+                  <div class="field half">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" />
+                  </div>
+                  <div class="field half">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" />
+                  </div>
+                  <div class="field">
+                    <label for="department">Department</label>
+                    <div class="select-wrapper">
+                      <select name="department" id="department">
+                        <option value="">-</option>
+                        <option value="sales">Sales</option>
+                        <option value="tech">Tech Support</option>
+                        <option value="null">/dev/null</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="4"></textarea>
+                  </div>
+                  <div class="field">
+                    <input type="checkbox" id="human" name="human" /><label for="human">I'm a human</label>
+                  </div>
+                  <div class="field">
+                    <label>But are you a robot?</label>
+                    <input type="radio" id="robot_yes" name="robot" /><label for="robot_yes">Yes</label>
+                    <input type="radio" id="robot_no" name="robot" /><label for="robot_no">No</label>
+                  </div>
+                </div>
+                <ul class="actions">
+                  <li><a href="#" class="button">Get Started</a></li>
+                </ul>
+              </form>
+              -->
+            </div>
+            <footer>
+              <!-- <ul class="icons">
+                <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="https://github.com/SwipesForScience/SwipesForScience" class="icon fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+              </ul> -->
+            </footer>
+          </section>
+
+        <!-- Banner -->
+          <section id="banner">
+            <div class="inner">
+              <div class="content">
+                <ul>
+                  <li class="bordered"><img src="./images/braindr.gif" alt="" /></li>
+                  <li><img src="./images/appstract.gif" alt="" /></li>
+                  <li class="bordered"><img src="./images/ica.gif" alt="" /></li>
+                  <!-- <li><img src="https://s3-us-west-1.amazonaws.com/braindrles/031903_slice_2.png" alt="" /></li>
+                  <li><img src="https://media.giphy.com/media/fxR1CmdpkHMVVarKlp/giphy.gif" alt="" /></li> -->
+                  <!-- <li><img src="images/pic04.jpg" alt="" /></li>
+                  <li><img src="images/pic05.jpg" alt="" /></li> -->
+                </ul>
+              </div>
+            </div>
+          </section>
+
+      </div>
+
+    <!-- Scripts -->
+      <script src="assets/js/main.js"></script>
+      <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+      <script type="text/javascript">
+         (function(){
+            emailjs.init("user_t44QlphsrYCH1hTw59nhh");
+         })();
+      </script>
+			<script>
+			function email(){
+				var elem = document.getElementById("email");
+				var email = elem.value;
+				if (email && email.indexOf('@') > 0 && email.indexOf('.') > 0) {
+					console.log('valid email', email);
+					document.getElementsByClassName('actions')[0].innerHTML = '<li>Thanks! We will contact you shortly to discuss</li>'
+					var service_id = "default_service";
+					var template_id = "template_Fb2Cs86e";
+
+					emailjs.send(service_id, template_id, {from_name: email, reply_to: email})
+				  	.then(function(){
+				    	alert("Sent!");
+				    }, function(err) {
+				      alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
+				    });
+
+				} else {
+					alert('please enter a valid email')
+				}
 			}
-		</style>
-	</head>
-	<body class="is-preload">
+			</script>
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
-
-				<!-- Wrapper -->
-					<section id="wrapper">
-						<div class="inner">
-							<h1>Swipes<b>4</b>Science</h1>
-							<h2>Build your own citizen science game<br />
-							to annotate your dataset</h2>
-							<p>
-								Annotating large datasets of images and text is time-consuming!
-								That's why we're building an extensible, easy-to-use, template to turn your
-								scientific data annotation project into a citizen science game.
-							</p>
-							<ul class="actions">
-								<li><a href="#" class="button primary icon fa-trello">Help us on Trello</a></li>
-								<li><a href="#" class="button primary icon fa-user">Join our beta group</a></li>
-							</ul>
-							<!--
-							<hr />
-							<h3>Form Stuff</h3>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field half">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field half">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="department">Department</label>
-										<div class="select-wrapper">
-											<select name="department" id="department">
-												<option value="">-</option>
-												<option value="sales">Sales</option>
-												<option value="tech">Tech Support</option>
-												<option value="null">/dev/null</option>
-											</select>
-										</div>
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
-									</div>
-									<div class="field">
-										<input type="checkbox" id="human" name="human" /><label for="human">I'm a human</label>
-									</div>
-									<div class="field">
-										<label>But are you a robot?</label>
-										<input type="radio" id="robot_yes" name="robot" /><label for="robot_yes">Yes</label>
-										<input type="radio" id="robot_no" name="robot" /><label for="robot_no">No</label>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><a href="#" class="button">Get Started</a></li>
-								</ul>
-							</form>
-							-->
-						</div>
-						<footer>
-							<ul class="icons">
-								<!-- <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li> -->
-								<li><a href="https://github.com/SwipesForScience/SwipesForScience" class="icon fa-github"><span class="label">GitHub</span></a></li>
-								<!-- <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li> -->
-							</ul>
-						</footer>
-					</section>
-
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<div class="content">
-								<ul>
-									<li class="bordered"><img src="./images/braindr.gif" alt="" /></li>
-									<li><img src="./images/appstract.gif" alt="" /></li>
-									<li class="bordered"><img src="./images/ica.gif" alt="" /></li>
-									<!-- <li><img src="https://s3-us-west-1.amazonaws.com/braindrles/031903_slice_2.png" alt="" /></li>
-									<li><img src="https://media.giphy.com/media/fxR1CmdpkHMVVarKlp/giphy.gif" alt="" /></li> -->
-									<!-- <li><img src="images/pic04.jpg" alt="" /></li>
-									<li><img src="images/pic05.jpg" alt="" /></li> -->
-								</ul>
-							</div>
-						</div>
-					</section>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/main.js"></script>
-
-	</body>
+  </body>
 </html>
