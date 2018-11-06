@@ -88,6 +88,9 @@
                 Annotating large datasets of images and text is time-consuming!
                 That's why we're building an extensible, easy-to-use, template to turn your
                 scientific data annotation project into a citizen science game.
+
+								We are still under development, so please get in touch if you have ideas
+								you'd like to share!
               </p>
               <ul class="actions nobottom">
                 <!-- <li><a href="http://docs.swipesforscience.org" class="button primary icon fa-github">Build your own</a></li> -->
@@ -214,7 +217,12 @@
 	          (user) => {
 	            document.getElementsByClassName('actions')[0].innerHTML = '<li>Thanks! We will contact you shortly to discuss</li>'
 	          }, (err) => {
-							 document.getElementsByClassName('actions')[0].innerHTML = err;
+							console.log('error is', err);
+							if (err.message == 'Error: The email address is already in use by another account.') {
+								document.getElementsByClassName('actions')[0].innerHTML = 'We already have your email and will get back to you soon!';
+							} else {
+								document.getElementsByClassName('actions')[0].innerHTML = err;
+							}
 	        });
 
 					// var service_id = "default_service";
